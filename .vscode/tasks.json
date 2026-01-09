@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "Build API",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -14,7 +14,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "publish",
+            "label": "Publish API",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -26,7 +26,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch",
+            "label": "Watch API",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -36,6 +36,31 @@
                 "${workspaceFolder}/dotnet/src/Coffee2Live.App/Coffee2Live.App.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Run API",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/dotnet/src/Coffee2Live.App/Coffee2Live.App.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Run App",
+            "type": "npm",
+            "script": "start",
+            "path": "angular/",
+            "problemMatcher": []
+        },
+        {
+            "label": "Test App",
+            "type": "npm",
+            "script": "test",
+            "path": "angular/",
+            "problemMatcher": []
         }
     ]
 }
