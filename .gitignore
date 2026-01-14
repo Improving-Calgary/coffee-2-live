@@ -111,3 +111,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 thoughts.md
+.polo/
+.specs/
+.github/

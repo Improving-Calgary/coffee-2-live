@@ -49,7 +49,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "Run App",
+            "label": "Serve App",
             "type": "npm",
             "script": "start",
             "path": "angular/",

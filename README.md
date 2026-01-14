@@ -5,6 +5,10 @@ Coffee2Live is a full-stack application that provides a web interface for managi
 
 ## Technical Requirements
 
+### Development Environment
+- **VS Code**: Recommended IDE for development
+  - **C# Dev Kit Extension**: Provides rich language support for C# and helps you manage your code with a solution explorer and test your code with integrated unit test discovery and execution
+
 ### Backend (ASP.NET Core)
 - **.NET SDK**: 8.0 or higher
 - **ASP.NET Core Runtime**: 8.0
@@ -13,7 +17,6 @@ Coffee2Live is a full-stack application that provides a web interface for managi
 ### Frontend (Angular)
 - **Node.js**: 18 or higher
 - **npm**: 9 or higher
-- **Angular CLI**: 20.3.8 or higher
 
 ## Project Structure
 - **Backend**: Located in the `dotnet/` directory, contains the ASP.NET Core Web API.
@@ -47,3 +50,7 @@ Coffee2Live is a full-stack application that provides a web interface for managi
    npm start
    ```
    The application will be available at `http://localhost:4200`.
+
+4. If all goes well, you should see this in your browser:
+
+   ![Coffee2Live Screenshot](./coffee2live-screenshot.png)
