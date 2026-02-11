@@ -52,14 +52,14 @@
             "label": "Serve App",
             "type": "npm",
             "script": "start",
-            "path": "angular/",
+            "path": "react/",
             "problemMatcher": []
         },
         {
             "label": "Test App",
             "type": "npm",
             "script": "test",
-            "path": "angular/",
+            "path": "react/",
             "problemMatcher": []
         }
     ]

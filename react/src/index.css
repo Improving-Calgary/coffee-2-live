@@ -1,8 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
 :root {
-  --coffee-brown: #6f4e37; /* primary */
-  --coffee-cream: #f3eadf; /* background */
+  --coffee-brown: #6f4e37;
+  --coffee-cream: #f3eadf;
   --coffee-darker: #4b3527;
   --coffee-accent: #a47148;
 }
