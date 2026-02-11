@@ -1,7 +1,7 @@
 # Coffee2Live Project
 
 ## Overview
-Coffee2Live is a full-stack application that provides a web interface for managing coffee-related data. It consists of a backend built with ASP.NET Core and a frontend developed using Angular.
+Coffee2Live is a full-stack application that provides a web interface for managing coffee-related data. It consists of a backend built with ASP.NET Core and a frontend developed using React.
 
 ## Technical Requirements
 
@@ -14,13 +14,13 @@ Coffee2Live is a full-stack application that provides a web interface for managi
 - **ASP.NET Core Runtime**: 8.0
 - **Database**: None (uses JSON files for data storage)
 
-### Frontend (Angular)
+### Frontend (React)
 - **Node.js**: 18 or higher
 - **npm**: 9 or higher
 
 ## Project Structure
 - **Backend**: Located in the `dotnet/` directory, contains the ASP.NET Core Web API.
-- **Frontend**: Located in the `angular/` directory, contains the Angular application.
+- **Frontend**: Located in the `react/` directory, contains the React application.
 - **Data**: JSON files located in `dotnet/src/Coffee2Live.App/Data/`.
 
 ## Quick Start
@@ -39,13 +39,13 @@ Coffee2Live is a full-stack application that provides a web interface for managi
 ### Frontend
 1. Navigate to the frontend directory:
    ```bash
-   cd angular
+   cd react
    ```
 2. Install dependencies:
    ```bash
    npm install
    ```
-3. Start the Angular application:
+3. Start the React application:
    ```bash
    npm start
    ```
