@@ -19,7 +19,9 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseRouting();
 app.UseCors("AllowAngular");
+app.UseAuthorization();
 app.MapGet("/", () => Results.Redirect("/swagger"));
 
 app.MapControllers();
