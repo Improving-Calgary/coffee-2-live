@@ -11,4 +11,5 @@ export interface Coffee {
   body: number;
   roast: Roast;
   bestFor: string;
+  price: number;
 }

@@ -114,3 +114,5 @@ thoughts.md
 .polo/
 .specs/
 .github/
+**/*/node_modules/
+

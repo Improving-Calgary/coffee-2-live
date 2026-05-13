@@ -10,24 +10,42 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace Coffee2Live.App.Controllers
 {
+    /// <summary>
+    /// Controller for managing coffees
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class CoffeesController : ControllerBase
     {
         private readonly Lazy<List<Coffee>> _coffees;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CoffeesController"/> class.
+        /// </summary> 
+        /// <param name="env">The web host environment</param>   
         public CoffeesController(IWebHostEnvironment env)
         {
             var dataPath = Path.Combine(env.ContentRootPath, "Data", "coffees.json");
             _coffees = new Lazy<List<Coffee>>(() => LoadCoffees(dataPath));
         }
 
+
+        /// <summary>
+        /// Get all coffees
+        /// </summary>
+        /// <response code="200">Returns the list of coffees</response>
         [HttpGet]
         public ActionResult<IEnumerable<Coffee>> GetAll()
         {
             return Ok(_coffees.Value);
         }
 
+        /// <summary>
+        /// Get a coffee by its ID
+        /// </summary>
+        /// <param name="id">The ID of the coffee</param>
+        /// <response code="200">Returns the coffee with the specified ID</response>
+        /// <response code="404">If no coffee with the specified ID is found</response>
         [HttpGet("{id}")]
         public ActionResult<Coffee> GetById(Guid id)
         {
@@ -52,13 +70,14 @@ namespace Coffee2Live.App.Controllers
                 {
                     Id = CreateDeterministicGuid(i.Name),
                     Name = i.Name ?? string.Empty,
-                    Origin = string.Empty,
+                    Origin = i.Origin ?? string.Empty,
                     TastingNotes = i.TastingNotes ?? string.Empty,
                     Bitterness = i.Bitterness,
                     Body = i.Body,
                     BestFor = i.BestFor ?? string.Empty,
                     Acidity = TryParseEnum<Acidity>(i.Acidity, Acidity.Medium),
-                    Roast = TryParseEnum<Roast>(i.Roast, Roast.Medium)
+                    Roast = TryParseEnum<Roast>(i.Roast, Roast.Medium),
+                    Price = i.Price
                 };
                 list.Add(coffee);
             }
@@ -90,6 +109,7 @@ namespace Coffee2Live.App.Controllers
             public int Body { get; set; }
             public string? Roast { get; set; }
             public string? BestFor { get; set; }
+            public decimal Price { get; set; }
         }
     }
 }

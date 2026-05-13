@@ -22,6 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Coffee2Live.App\Coffee2Live.App.csproj" />
     <ProjectReference Include="..\..\src\Coffee2Live.Domain\Coffee2Live.Domain.csproj" />
     <ProjectReference Include="..\..\src\Coffee2Live.Recommendation\Coffee2Live.Recommendation.csproj" />
   </ItemGroup>
