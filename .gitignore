@@ -113,6 +113,6 @@ $RECYCLE.BIN/
 thoughts.md
 .polo/
 .specs/
-.github/
+# .github/
 **/*/node_modules/
 
