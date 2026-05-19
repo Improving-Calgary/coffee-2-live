@@ -115,4 +115,6 @@ thoughts.md
 .specs/
 # .github/
 **/*/node_modules/
+**/test-results/
+**/playwright-report/
 

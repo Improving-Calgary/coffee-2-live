@@ -1,18 +1,4 @@
-namespace Coffee2Live.Domain;
-
-public enum Acidity
-{
-    Low,
-    Medium,
-    High
-}
-
-public enum Roast
-{
-    Light,
-    Medium,
-    Dark
-}
+namespace blazor.Models;
 
 public class Coffee
 {
@@ -21,8 +7,8 @@ public class Coffee
     public string Origin { get; set; } = string.Empty;
     public string TastingNotes { get; set; } = string.Empty;
     public int Bitterness { get; set; }
-    public Acidity Acidity { get; set; }
+    public int Acidity { get; set; }
     public int Body { get; set; }
-    public Roast Roast { get; set; }
+    public int Roast { get; set; }
     public string BestFor { get; set; } = string.Empty;
 }

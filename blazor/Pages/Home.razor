@@ -1,0 +1,59 @@
+﻿@page "/"
+@inject CoffeeService CoffeeService
+
+<PageTitle>Coffee2Live</PageTitle>
+
+<div class="container py-4">
+    <h1 class="display-5 fw-semibold mb-3">Coffee2Live</h1>
+    <p class="text-secondary mb-4">Curated coffees you will love.</p>
+
+    @if (error is not null)
+    {
+        <div class="alert alert-danger">@error</div>
+    }
+    else if (coffees is null)
+    {
+        <div class="text-secondary">Loading&hellip;</div>
+    }
+    else
+    {
+        <div class="row g-3">
+            @foreach (var c in coffees!)
+            {
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card coffee-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">@c.Name</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@c.Origin</h6>
+                            <p class="card-text small mb-2">@c.TastingNotes</p>
+                            <div class="small">
+                                <span class="badge text-bg-light me-1">Roast: @c.Roast</span>
+                                <span class="badge text-bg-light me-1">Acidity: @c.Acidity</span>
+                                <span class="badge text-bg-light me-1">Body: @c.Body/5</span>
+                                <span class="badge text-bg-light me-1">Bitterness: @c.Bitterness/10</span>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted small">Best for: @c.BestFor</div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private Coffee[]? coffees;
+    private string? error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            coffees = await CoffeeService.ListAsync();
+        }
+        catch
+        {
+            error = "Failed to load coffees";
+        }
+    }
+}

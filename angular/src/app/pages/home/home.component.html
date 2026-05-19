@@ -5,36 +5,11 @@
   <div *ngIf="error()" class="alert alert-danger">{{ error() }}</div>
   <div *ngIf="!coffees() && !error()" class="text-secondary">Loading…</div>
 
-  <div class="d-flex flex-wrap gap-3 mb-3" *ngIf="coffees()">
-    <div>
-      <label for="roastFilter" class="form-label me-2">Roast</label>
-      <select id="roastFilter" class="form-select w-auto d-inline-block"
-        (change)="roastFilter.set($any($event.target).value || null)">
-        <option value="">— All —</option>
-        <option value="light">Light</option>
-        <option value="medium">Medium</option>
-        <option value="dark">Dark</option>
-      </select>
-    </div>
-    <div>
-      <label for="sortSelect" class="form-label me-2">Sort by</label>
-      <select id="sortSelect" class="form-select w-auto d-inline-block"
-        (change)="sortKey.set($any($event.target).value || null)">
-        <option value="">— None —</option>
-        <option value="name">Name</option>
-        <option value="origin">Origin</option>
-        <option value="body">Body</option>
-        <option value="bitterness">Bitterness</option>
-        <option value="price">Price</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="row g-3" *ngIf="sortedCoffees() as list">
+  <div class="row g-3" *ngIf="coffees() as list">
     <div class="col-12 col-md-6 col-lg-4" *ngFor="let c of list">
       <div class="card coffee-card h-100">
         <div class="card-body">
-          <h5 class="card-title">{{ c.name }} ({{ c.price | currency }})</h5>
+          <h5 class="card-title">{{ c.name }}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ c.origin }}</h6>
           <p class="card-text small mb-2">{{ c.tastingNotes }}</p>
           <div class="small">
