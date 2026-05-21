@@ -16,6 +16,8 @@ Coffee2Live is a full-stack application that provides a web interface for managi
 
 ### Frontend (Blazor WebAssembly)
 - **.NET SDK**: 8.0 or higher (same as backend)
+- **Node.js**: 18 or higher
+- **NPM**: 9 or higher
 
 ## Project Structure
 - **Backend**: Located in the `dotnet/` directory, contains the ASP.NET Core Web API.
