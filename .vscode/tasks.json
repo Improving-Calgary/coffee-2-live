@@ -2,30 +2,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build API",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/dotnet/src/Coffee2Live.App/Coffee2Live.App.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary;ForceNoAlign"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "Publish API",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "publish",
-                "${workspaceFolder}/dotnet/src/Coffee2Live.App/Coffee2Live.App.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary;ForceNoAlign"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
             "label": "Watch API",
             "command": "dotnet",
             "type": "process",
@@ -49,13 +25,6 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "Serve App",
-            "type": "npm",
-            "script": "start",
-            "path": "angular/",
-            "problemMatcher": []
-        },
-        {
             "label": "Watch Blazor App",
             "command": "dotnet",
             "type": "process",
@@ -77,13 +46,6 @@
                 "${workspaceFolder}/blazor/blazor.csproj"
             ],
             "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "Test App",
-            "type": "npm",
-            "script": "test",
-            "path": "angular/",
-            "problemMatcher": []
         },
         {
             "label": "Build Agent Instructions",
