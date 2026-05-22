@@ -7,8 +7,7 @@
     "acidity": "high",
     "body": 2,
     "roast": "light",
-    "bestFor": "Pour over, drip coffee, those who enjoy fruity and floral profiles",
-    "price": 11.99
+    "bestFor": "Pour over, drip coffee, those who enjoy fruity and floral profiles"
   },
   {
     "name": "Colombian Supremo",
@@ -18,8 +17,7 @@
     "acidity": "medium",
     "body": 3,
     "roast": "medium",
-    "bestFor": "Espresso, French press, everyday drinking, those who prefer balanced flavors",
-    "price": 9.99
+    "bestFor": "Espresso, French press, everyday drinking, those who prefer balanced flavors"
   },
   {
     "name": "Sumatra Mandheling",
@@ -29,8 +27,7 @@
     "acidity": "low",
     "body": 5,
     "roast": "dark",
-    "bestFor": "French press, cold brew, those who enjoy bold, earthy coffees with low acidity",
-    "price": 10.99
+    "bestFor": "French press, cold brew, those who enjoy bold, earthy coffees with low acidity"
   },
   {
     "name": "Kenya AA",
@@ -40,8 +37,7 @@
     "acidity": "high",
     "body": 3,
     "roast": "light",
-    "bestFor": "V60 pour over, Chemex, those who love juicy, complex acidity",
-    "price": 11.49
+    "bestFor": "V60 pour over, Chemex, those who love juicy, complex acidity"
   },
   {
     "name": "Guatemala Antigua",
@@ -51,8 +47,7 @@
     "acidity": "medium",
     "body": 3,
     "roast": "medium",
-    "bestFor": "Drip coffee, espresso, balanced and sweet cups",
-    "price": 10.49
+    "bestFor": "Drip coffee, espresso, balanced and sweet cups"
   },
   {
     "name": "Costa Rica Tarrazú",
@@ -62,8 +57,7 @@
     "acidity": "high",
     "body": 2,
     "roast": "light",
-    "bestFor": "Pour over, Aeropress, clarity-forward brews",
-    "price": 10.99
+    "bestFor": "Pour over, Aeropress, clarity-forward brews"
   },
   {
     "name": "Brazil Santos",
@@ -73,8 +67,7 @@
     "acidity": "low",
     "body": 4,
     "roast": "medium",
-    "bestFor": "Espresso, moka pot, crowd-pleasing blends",
-    "price": 9.49
+    "bestFor": "Espresso, moka pot, crowd-pleasing blends"
   },
   {
     "name": "Tanzania Peaberry",
@@ -84,8 +77,7 @@
     "acidity": "high",
     "body": 2,
     "roast": "light",
-    "bestFor": "Kalita Wave, manual brews with high clarity",
-    "price": 11.49
+    "bestFor": "Kalita Wave, manual brews with high clarity"
   },
   {
     "name": "Hawaiian Kona",
@@ -95,8 +87,7 @@
     "acidity": "medium",
     "body": 3,
     "roast": "medium",
-    "bestFor": "Drip, siphon, smooth and delicate cups",
-    "price": 11.99
+    "bestFor": "Drip, siphon, smooth and delicate cups"
   },
   {
     "name": "Jamaican Blue Mountain",
@@ -106,8 +97,7 @@
     "acidity": "medium",
     "body": 3,
     "roast": "medium",
-    "bestFor": "Filter coffee, those who prefer mild, refined profiles",
-    "price": 11.79
+    "bestFor": "Filter coffee, those who prefer mild, refined profiles"
   },
   {
     "name": "Rwanda Bourbon",
@@ -117,8 +107,7 @@
     "acidity": "high",
     "body": 2,
     "roast": "light",
-    "bestFor": "Pour over, bringing out delicate florals and fruit",
-    "price": 10.99
+    "bestFor": "Pour over, bringing out delicate florals and fruit"
   },
   {
     "name": "Burundi Kayanza",
@@ -128,8 +117,7 @@
     "acidity": "medium",
     "body": 2,
     "roast": "light",
-    "bestFor": "Hand-brewed filter, bright yet sweet cups",
-    "price": 10.49
+    "bestFor": "Hand-brewed filter, bright yet sweet cups"
   },
   {
     "name": "Peru Chanchamayo",
@@ -139,8 +127,7 @@
     "acidity": "medium",
     "body": 3,
     "roast": "medium",
-    "bestFor": "Drip, batch brew, approachable daily drinker",
-    "price": 9.99
+    "bestFor": "Drip, batch brew, approachable daily drinker"
   },
   {
     "name": "Mexico Chiapas",
@@ -150,8 +137,7 @@
     "acidity": "medium",
     "body": 3,
     "roast": "medium",
-    "bestFor": "Espresso and milk drinks, balanced chocolate notes",
-    "price": 11.99
+    "bestFor": "Espresso and milk drinks, balanced chocolate notes"
   },
   {
     "name": "Honduras Marcala",
@@ -161,8 +147,7 @@
     "acidity": "medium",
     "body": 4,
     "roast": "medium",
-    "bestFor": "Auto-drip, immersion, sweet and round profiles",
-    "price": 9.99
+    "bestFor": "Auto-drip, immersion, sweet and round profiles"
   },
   {
     "name": "Nicaragua Segovia",
@@ -172,8 +157,7 @@
     "acidity": "medium",
     "body": 3,
     "roast": "medium",
-    "bestFor": "French press, drip, balanced cups",
-    "price": 9.99
+    "bestFor": "French press, drip, balanced cups"
   },
   {
     "name": "El Salvador Pacamara",
@@ -183,8 +167,7 @@
     "acidity": "medium",
     "body": 4,
     "roast": "light",
-    "bestFor": "Pour over, showcasing varietal clarity",
-    "price": 11.49
+    "bestFor": "Pour over, showcasing varietal clarity"
   },
   {
     "name": "Panama Geisha",
@@ -194,8 +177,7 @@
     "acidity": "high",
     "body": 2,
     "roast": "light",
-    "bestFor": "High-clarity filter brews, competition-style cups",
-    "price": 11.99
+    "bestFor": "High-clarity filter brews, competition-style cups"
   },
   {
     "name": "Papua New Guinea",
@@ -205,8 +187,7 @@
     "acidity": "medium",
     "body": 4,
     "roast": "dark",
-    "bestFor": "Immersion, cold brew, rich and sweet cups",
-    "price": 10.49
+    "bestFor": "Immersion, cold brew, rich and sweet cups"
   },
   {
     "name": "India Monsooned Malabar",
@@ -216,8 +197,7 @@
     "acidity": "low",
     "body": 5,
     "roast": "dark",
-    "bestFor": "Espresso, blends needing body and low acidity",
-    "price": 10.99
+    "bestFor": "Espresso, blends needing body and low acidity"
   },
   {
     "name": "Yemen Mokha",
@@ -227,8 +207,7 @@
     "acidity": "high",
     "body": 3,
     "roast": "medium",
-    "bestFor": "Manual filter, adventurous, complex cups",
-    "price": 11.49
+    "bestFor": "Manual filter, adventurous, complex cups"
   },
   {
     "name": "Bolivia Caranavi",
@@ -238,8 +217,7 @@
     "acidity": "medium",
     "body": 3,
     "roast": "light",
-    "bestFor": "Pour over, nuanced and sweet brews",
-    "price": 10.99
+    "bestFor": "Pour over, nuanced and sweet brews"
   },
   {
     "name": "Uganda Bugisu",
@@ -249,7 +227,6 @@
     "acidity": "low",
     "body": 5,
     "roast": "dark",
-    "bestFor": "French press, espresso, bold and heavy cups",
-    "price": 10.49
+    "bestFor": "French press, espresso, bold and heavy cups"
   }
 ]
