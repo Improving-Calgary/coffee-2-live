@@ -1,0 +1,48 @@
+# config.yml
+# Maps the human/AI steering docs to GitHub Copilot instruction files.
+# Run: npx tsx .build_agent_instructions/build.ts
+
+# Source documents — the single source of truth for all coding standards.
+sources:
+  - id: product_overview
+    path: .docs/product_overview.md
+  - id: engineering_principles
+    path: .docs/engineering_principles.md
+  - id: dod
+    path: .docs/definition_of_done.md
+  - id: code_review_guide
+    path: .docs/code_review_guide.md
+  - id: backend_tech_design
+    path: .docs/backend/technical_design.md
+  - id: backend_style_guide
+    path: .docs/backend/csharp_style_guide.md
+  - id: backend_testing_guide
+    path: .docs/backend/testing_style_guide.md
+  - id: frontend_tech_design
+    path: .docs/frontend/technical_design.md
+  - id: frontend_style_guide
+    path: .docs/frontend/blazor_csharp_style_guide.md
+  - id: frontend_testing_guide
+    path: .docs/frontend/testing_style_guide.md
+
+# GitHub Copilot output targets.
+targets:
+  # Workspace-wide instructions (product, principles, DoD, code review)
+  github:
+    template: .build_agent_instructions/github.md.j2
+    output: .github/copilot-instructions.md
+
+  # Backend-scoped instructions (applied to dotnet/**)
+  github-backend:
+    template: .build_agent_instructions/github-backend.md.j2
+    output: .github/instructions/backend.instructions.md
+
+  # Frontend-scoped instructions (applied to blazor/**)
+  github-frontend:
+    template: .build_agent_instructions/github-frontend.md.j2
+    output: .github/instructions/frontend.instructions.md
+
+  # Code review instructions (applied to all files, optimised for the 4,000 char review limit)
+  github-review:
+    template: .build_agent_instructions/github-review.md.j2
+    output: .github/instructions/review.instructions.md

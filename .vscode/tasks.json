@@ -2,6 +2,30 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Build API",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/dotnet/src/Coffee2Live.App/Coffee2Live.App.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Publish API",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/dotnet/src/Coffee2Live.App/Coffee2Live.App.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "Watch API",
             "command": "dotnet",
             "type": "process",
@@ -25,7 +49,18 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "Watch Blazor App",
+            "label": "Run Blazor",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/blazor/blazor.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Watch Blazor",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -37,15 +72,16 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "Run Blazor App",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "run",
-                "--project",
-                "${workspaceFolder}/blazor/blazor.csproj"
-            ],
-            "problemMatcher": "$msCompile"
+            "label": "Run All",
+            "dependsOn": ["Run API", "Run Blazor"],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch All",
+            "dependsOn": ["Watch API", "Watch Blazor"],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
         },
         {
             "label": "Build Agent Instructions",
