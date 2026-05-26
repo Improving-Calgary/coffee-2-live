@@ -84,6 +84,30 @@
             "problemMatcher": []
         },
         {
+            "label": "Format Backend",
+            "type": "shell",
+            "command": "dotnet format",
+            "options": {
+                "cwd": "${workspaceFolder}/dotnet"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Format Frontend",
+            "type": "shell",
+            "command": "dotnet format",
+            "options": {
+                "cwd": "${workspaceFolder}/blazor"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Format All",
+            "dependsOn": ["Format Backend", "Format Frontend"],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
             "label": "Build Agent Instructions",
             "type": "shell",
             "command": "npx tsx .build_agent_instructions/build.ts",

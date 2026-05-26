@@ -99,6 +99,90 @@ public class CoffeesControllerTests
         result.Result.Should().BeOfType<NotFoundResult>();
     }
 
+    [Test]
+    public void GetAll_ReturnsOk_WithEmptyList_WhenFileIsEmpty()
+    {
+        WriteJson("[]");
+
+        var result = CreateController().GetAll();
+
+        var ok = result.Result as OkObjectResult;
+        ok.Should().NotBeNull();
+        (ok!.Value as IEnumerable<Coffee>).Should().BeEmpty();
+    }
+
+    [Test]
+    public void GetAll_ReturnsAllCoffees_WhenMultipleExist()
+    {
+        WriteJson("""
+            [
+              { "name": "Espresso", "bitterness": 8, "body": 9, "price": 3.50 },
+              { "name": "Latte",    "bitterness": 3, "body": 6, "price": 4.00 },
+              { "name": "Lungo",    "bitterness": 5, "body": 7, "price": 3.75 }
+            ]
+            """);
+
+        var coffees = GetAllCoffees().ToList();
+
+        coffees.Should().HaveCount(3);
+        coffees.Select(c => c.Name).Should().BeEquivalentTo(["Espresso", "Latte", "Lungo"]);
+    }
+
+    [Test]
+    public void GetById_ReturnsCorrectCoffee_WhenMultipleCoffeesExist()
+    {
+        WriteJson("""
+            [
+              { "name": "Espresso", "bitterness": 8, "body": 9, "price": 3.50 },
+              { "name": "Latte",    "bitterness": 3, "body": 6, "price": 4.00 }
+            ]
+            """);
+        var all = GetAllCoffees().ToList();
+        var latteId = all.Single(c => c.Name == "Latte").Id;
+
+        var result = CreateController().GetById(latteId);
+
+        var ok = result.Result as OkObjectResult;
+        ok.Should().NotBeNull();
+        (ok!.Value as Coffee)!.Name.Should().Be("Latte");
+    }
+
+    [Test]
+    public void GetAll_MapsAllFields_Correctly()
+    {
+        WriteJson("""
+            [{ "name": "Kenya AA", "origin": "Kenya", "tastingNotes": "Citrus, Berry", "bitterness": 4, "acidity": "High", "body": 6, "roast": "Light", "bestFor": "Pour Over", "price": 5.25 }]
+            """);
+
+        var coffee = GetAllCoffees().First();
+
+        coffee.Name.Should().Be("Kenya AA");
+        coffee.Origin.Should().Be("Kenya");
+        coffee.TastingNotes.Should().Be("Citrus, Berry");
+        coffee.Bitterness.Should().Be(4);
+        coffee.Acidity.Should().Be(Acidity.High);
+        coffee.Body.Should().Be(6);
+        coffee.Roast.Should().Be(Roast.Light);
+        coffee.BestFor.Should().Be("Pour Over");
+        coffee.Price.Should().Be(5.25m);
+    }
+
+    [Test]
+    public void GetAll_EachCoffee_HasUniqueId()
+    {
+        WriteJson("""
+            [
+              { "name": "Espresso", "bitterness": 8, "body": 9, "price": 3.50 },
+              { "name": "Latte",    "bitterness": 3, "body": 6, "price": 4.00 },
+              { "name": "Lungo",    "bitterness": 5, "body": 7, "price": 3.75 }
+            ]
+            """);
+
+        var ids = GetAllCoffees().Select(c => c.Id).ToList();
+
+        ids.Should().OnlyHaveUniqueItems();
+    }
+
     // --- Deterministic GUID ---
 
     [Test]

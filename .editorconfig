@@ -21,16 +21,16 @@ csharp_new_line_before_catch = true
 csharp_new_line_before_finally = true
 
 # Prefer file-scoped namespaces (used in Services, Models, Domain)
-csharp_style_namespace_declarations = file_scoped:suggestion
+csharp_style_namespace_declarations = file_scoped:error
 
 # using directives: System.* first, then alphabetical
 dotnet_sort_system_directives_first = true
 dotnet_separate_import_directive_groups = false
 
-# Prefer var when type is apparent
-csharp_style_var_for_built_in_types = false:suggestion
+# Prefer var everywhere
+csharp_style_var_for_built_in_types = true:suggestion
 csharp_style_var_when_type_is_apparent = true:suggestion
-csharp_style_var_elsewhere = false:suggestion
+csharp_style_var_elsewhere = true:suggestion
 
 # Expression-bodied members (used in CoffeeService)
 csharp_style_expression_bodied_methods = when_on_single_line:suggestion
@@ -39,6 +39,14 @@ csharp_style_expression_bodied_properties = true:suggestion
 # Null checks
 dotnet_style_null_propagation = true:suggestion
 dotnet_style_coalesce_expression = true:suggestion
+
+# Enforced analyzer rules (fail build + dotnet format --verify-no-changes)
+dotnet_diagnostic.IDE0005.severity = error  # Remove unused usings
+dotnet_diagnostic.IDE0051.severity = error  # Remove unused private members
+dotnet_diagnostic.IDE0001.severity = error  # Simplify type names
+dotnet_diagnostic.IDE0002.severity = error  # Remove unnecessary qualification
+dotnet_diagnostic.IDE0007.severity = error  # Use var instead of explicit type
+dotnet_diagnostic.IDE0008.severity = none   # Suppress "use explicit type" — we prefer var
 
 # this. qualification — don't require it
 dotnet_style_qualification_for_field = false:suggestion
