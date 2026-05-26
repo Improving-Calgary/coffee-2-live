@@ -58,6 +58,12 @@ A user story is considered **done** only when it meets all of the following crit
     - Backend: `dotnet test` from `dotnet/` runs green.
     - Frontend: `npx playwright test` from `blazor/tests/` runs green.
 
+- [ ] **No Build Warnings or Format Violations**: All code compiles cleanly and is correctly formatted.
+    - Backend: `dotnet build` from `dotnet/` — zero warnings (enforced via `TreatWarningsAsErrors`).
+    - Backend: `dotnet format --verify-no-changes` from `dotnet/` — exits clean.
+    - Frontend: `dotnet build` from `blazor/` — zero warnings (enforced via `TreatWarningsAsErrors`).
+    - Frontend: `dotnet format --verify-no-changes` from `blazor/` — exits clean.
+
 - [ ] **Code Style**: The implementation follows the project style guides.
     - Backend: `.docs/backend/csharp_style_guide.md`
     - Frontend: `.docs/frontend/blazor_csharp_style_guide.md`

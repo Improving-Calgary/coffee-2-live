@@ -1,4 +1,4 @@
-﻿namespace Coffee2Live.Tests;
+namespace Coffee2Live.Tests;
 
 public class Tests
 {
