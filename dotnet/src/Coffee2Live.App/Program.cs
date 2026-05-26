@@ -9,7 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngular",
+    options.AddPolicy("AllowFrontEnd",
         policy => policy.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
                         .AllowAnyHeader()
                         .AllowAnyMethod());
@@ -20,7 +20,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseRouting();
-app.UseCors("AllowAngular"); // allows any localhost port (Angular, Blazor, etc.)
+app.UseCors("AllowFrontEnd"); // allows any localhost port (e.g. Angular, React, Blazor, etc.)
 app.UseAuthorization();
 app.MapGet("/", () => Results.Redirect("/swagger"));
 
